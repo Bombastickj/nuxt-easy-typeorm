@@ -21,38 +21,23 @@ export default defineNuxtModule<NuxtEasyTypeORMOptions>({
 
     // setup typescript
     _nuxt.options.typescript.tsConfig.compilerOptions = defu(_nuxt.options.typescript.tsConfig.compilerOptions, {
-      experimentalDecorators: true,
       strictPropertyInitialization: false,
+      experimentalDecorators: true,
       emitDecoratorMetadata: true,
     })
     _nuxt.hook('nitro:config', (nitroConfig) => {
       nitroConfig.esbuild = nitroConfig.esbuild || {}
       nitroConfig.esbuild.options = nitroConfig.esbuild.options || {}
       nitroConfig.esbuild.options.tsconfigRaw = '{ "compilerOptions": { "experimentalDecorators": true } }'
+
+      // Add typeorm package (auto-imports)
+      nitroConfig.imports = nitroConfig.imports || {}
+      nitroConfig.imports.presets = nitroConfig.imports.presets || []
+      nitroConfig.imports.presets.push({ package: 'typeorm', ignore: ['default'] })
     })
 
-    // Add types
-    const nitroImports = [
-      'DataSource',
-      'DataSourceOptions',
-
-      // entitiy imports
-      'Entity',
-      'Column',
-      'PrimaryGeneratedColumn',
-      'CreateDateColumn',
-      'UpdateDateColumn',
-      'ManyToOne',
-      'OneToMany',
-      'OneToOne',
-      'JoinColumn',
-
-      // query imports
-      'In',
-      'Between',
-    ]
+    // Add defineDataSource composable
     addServerImports([
-      ...nitroImports.map(name => ({ name, from: 'typeorm' })),
       {
         from: resolver.resolve('runtime/server/composables/defineDataSource'),
         name: 'defineDataSource',
