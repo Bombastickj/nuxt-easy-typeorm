@@ -59,9 +59,10 @@ export default defineNuxtModule<NuxtEasyTypeORMOptions>({
       },
     ])
 
-    // Add entities directory to TypeORM config
-    addServerImportsDir(typeormDir)
+    // Add typeorm directory to nitro (auto-imports)
+    addServerImportsDir(`${typeormDir}/**`)
 
+    // Add typeorm directory to app (auto-imports)
     addImportsDir(typeormDir)
   },
 })
