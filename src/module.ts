@@ -20,6 +20,8 @@ export default defineNuxtModule<NuxtEasyTypeORMOptions>({
     const typeormDir = resolver.resolve(_nuxt.options.rootDir, _options.srcDir)
 
     // setup typescript
+    _nuxt.options.typescript = _nuxt.options.typescript || {}
+    _nuxt.options.typescript.tsConfig = _nuxt.options.typescript.tsConfig || {}
     _nuxt.options.typescript.tsConfig.compilerOptions = defu(_nuxt.options.typescript.tsConfig.compilerOptions, {
       strictPropertyInitialization: false,
       experimentalDecorators: true,
