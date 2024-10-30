@@ -2,6 +2,7 @@ import { defineNuxtModule, createResolver, addServerImports, addServerImportsDir
 import { defu } from 'defu'
 import { NUXT_EASY_TYPEORM_MODULE_ID, DEFAULT_OPTIONS } from './constants'
 import type { NuxtEasyTypeORMOptions } from './types'
+import 'reflect-metadata'
 
 export * from './types'
 
