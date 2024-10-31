@@ -2,7 +2,6 @@ import { defineNuxtModule, createResolver, addServerImports, addServerImportsDir
 import { defu } from 'defu'
 import { NUXT_EASY_TYPEORM_MODULE_ID, DEFAULT_OPTIONS } from './constants'
 import type { NuxtEasyTypeORMOptions } from './types'
-import 'reflect-metadata'
 
 export * from './types'
 
@@ -37,6 +36,9 @@ export default defineNuxtModule<NuxtEasyTypeORMOptions>({
       nitroConfig.imports = nitroConfig.imports || {}
       nitroConfig.imports.presets = nitroConfig.imports.presets || []
       nitroConfig.imports.presets.push({ package: 'typeorm', ignore: ['default'] })
+    })
+    _nuxt.hook('nitro:build:before', (nitro) => {
+      nitro.options.moduleSideEffects.push('reflect-metadata')
     })
 
     // Add defineDataSource composable
