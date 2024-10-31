@@ -8,7 +8,7 @@
 This Nuxt module is aimed for a seamless integration of TypeORM.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
+- [🏀 Online playground](https://stackblitz.com/github/Bombastickj/nuxt-easy-typeorm?file=playground%2Fapp.vue)
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Installation
