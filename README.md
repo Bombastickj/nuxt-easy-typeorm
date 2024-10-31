@@ -14,7 +14,7 @@ This Nuxt module is aimed for a seamless integration of TypeORM.
 ## Installation
 
 ```bash
-npx nuxi@latest module add easy-typeorm
+npx nuxi@latest module add nuxt-easy-typeorm
 ```
 
 
@@ -24,7 +24,7 @@ In your Nuxt project, configure the module options inside `nuxt.config.js`:
 
 ```ts
 export default defineNuxtConfig({
-  modules: ['easy-typeorm'],
+  modules: ['nuxt-easy-typeorm'],
   typeorm: {
     directory: 'my-typeorm-folder', // optional: defaults to 'typeorm' if not specified
   }
@@ -100,14 +100,14 @@ In this example, `useDatabase()` initializes the database connection and retriev
 
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/easy-typeorm/latest.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-version-href]: https://npmjs.com/package/easy-typeorm
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-easy-typeorm/latest.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/nuxt-easy-typeorm
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/easy-typeorm.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-downloads-href]: https://npm.chart.dev/easy-typeorm
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-easy-typeorm.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-downloads-href]: https://npm.chart.dev/nuxt-easy-typeorm
 
-[license-src]: https://img.shields.io/npm/l/easy-typeorm.svg?style=flat&colorA=020420&colorB=00DC82
-[license-href]: https://npmjs.com/package/easy-typeorm
+[license-src]: https://img.shields.io/npm/l/nuxt-easy-typeorm.svg?style=flat&colorA=020420&colorB=00DC82
+[license-href]: https://npmjs.com/package/nuxt-easy-typeorm
 
 [nuxt-src]: https://img.shields.io/badge/Nuxt-020420?logo=nuxt.js
 [nuxt-href]: https://nuxt.com

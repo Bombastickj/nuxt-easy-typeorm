@@ -1,5 +1,5 @@
 {
-  "name": "easy-typeorm",
+  "name": "nuxt-easy-typeorm",
   "version": "1.0.0",
   "description": "Easy TypeORM integration module for Nuxt",
   "repository": {
