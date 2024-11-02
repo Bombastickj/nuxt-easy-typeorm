@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v1.1.1
+
+[compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.1.0...v1.1.1)
+
+### 🩹 Fixes
+
+- **layers:** Typeorm directory gets resolved from each layers rootDir ([d25fb39](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/d25fb39))
+
+### 📖 Documentation
+
+- **playground:** Added playground link ([9c3d791](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/9c3d791))
+- Update playground example ([3f008b5](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/3f008b5))
+
+### 🏡 Chore
+
+- Update package-lock.json ([2282446](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/2282446))
+
+### ❤️ Contributors
+
+- Jonazzzz <bombastickj@gmail.com>
+
 ## v1.1.0
 
 
