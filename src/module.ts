@@ -1,3 +1,4 @@
+import fs from 'node:fs'
 import { defineNuxtModule, createResolver, addServerImports, addServerImportsDir, addImportsDir } from '@nuxt/kit'
 import { defu } from 'defu'
 import { NUXT_EASY_TYPEORM_MODULE_ID, DEFAULT_OPTIONS } from './constants'
@@ -14,10 +15,9 @@ export default defineNuxtModule<NuxtEasyTypeORMOptions>({
     },
   },
   defaults: DEFAULT_OPTIONS,
-  setup(_options, _nuxt) {
-    const resolver = createResolver(import.meta.url)
+  async setup(_options, _nuxt) {
+    const { resolve } = createResolver(import.meta.url)
     // const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
-    const typeormDir = resolver.resolve(_nuxt.options.rootDir, _options.srcDir)
 
     // setup typescript
     _nuxt.options.typescript = _nuxt.options.typescript || {}
@@ -44,15 +44,24 @@ export default defineNuxtModule<NuxtEasyTypeORMOptions>({
     // Add defineDataSource composable
     addServerImports([
       {
-        from: resolver.resolve('runtime/server/composables/defineDataSource'),
+        from: resolve('runtime/server/composables/defineDataSource'),
         name: 'defineDataSource',
       },
     ])
 
-    // Add typeorm directory to nitro (auto-imports)
-    addServerImportsDir(`${typeormDir}/**`)
+    // Go through each layer and find the typeorm directory
+    const _layers = [..._nuxt.options._layers].reverse()
+    for (const layer of _layers) {
+      const rootDir = layer.config.rootDir
+      const mabeFolder = resolve(rootDir, layer.config.typeorm?.srcDir || _options.srcDir)
+      const dirStat = await fs.promises.stat(mabeFolder).catch(() => null)
+      if (dirStat && dirStat.isDirectory()) {
+        // Add typeorm directory to nitro (auto-imports)
+        addServerImportsDir(`${mabeFolder}/**`)
 
-    // Add typeorm directory to app (auto-imports)
-    addImportsDir(typeormDir)
+        // Add typeorm directory to app (auto-imports)
+        addImportsDir(mabeFolder)
+      }
+    }
   },
 })
