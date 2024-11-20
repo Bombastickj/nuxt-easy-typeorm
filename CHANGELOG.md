@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.1.2
+
+[compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.1.1...v1.1.2)
+
+### 💅 Refactors
+
+- Optimize DataSource initialization and errors ([cd8f1e5](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/cd8f1e5))
+
+### 🏡 Chore
+
+- Update package dependencies and Nuxt version ([778cbef](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/778cbef))
+
+### ❤️ Contributors
+
+- Jonazzzz <bombastickj@gmail.com>
+
 ## v1.1.1
 
 [compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.1.0...v1.1.1)
