@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "prepack": "nuxt-module-build build",
-    "dev": "cd playground && npm install && nuxi dev",
+    "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
@@ -31,6 +31,9 @@
     "test": "vitest run",
     "test:watch": "vitest watch",
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
+  },
+  "peerDependencies": {
+    "sqlite3": "^5.1.7"
   },
   "dependencies": {
     "defu": "^6.1.4",
