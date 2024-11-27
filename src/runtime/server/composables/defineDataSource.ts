@@ -30,8 +30,7 @@ export function defineDataSource(options: DataSourceOptions) {
       })
       .catch((error) => {
         initializing = null
-        console.error('Error during DataSource initialization:', error)
-        throw error // Rethrow to allow handling where the function is called
+        throw new Error((error as Error).stack)
       })
 
     return initializing
