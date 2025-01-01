@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.1.3
+
+[compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.1.2...v1.1.3)
+
+### 🩹 Fixes
+
+- Enhance error handling in DataSource init ([5e2f270](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/5e2f270))
+
+### 🏡 Chore
+
+- Update package dependencies and dev script ([3384072](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/3384072))
+- Upgrade Nuxt-related devDependencies and vue-tsc ([44cc3d2](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/44cc3d2))
+
+### ❤️ Contributors
+
+- Jonazzzz <bombastickj@gmail.com>
+
 ## v1.1.2
 
 [compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.1.1...v1.1.2)
