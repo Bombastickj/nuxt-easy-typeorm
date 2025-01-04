@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.1.3...v1.2.0)
+
+### 🚀 Enhancements
+
+- Add context and preparation functions for ORM ([4621c83](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/4621c83))
+
+### ❤️ Contributors
+
+- Jonazzzz <bombastickj@gmail.com>
+
 ## v1.1.3
 
 [compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.1.2...v1.1.3)
