@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     shim: false,
     typeCheck: true,
     strict: true,
-  }
+  },
   // typeorm: {
   //   srcDir: 'my-typeorm',
   // },
