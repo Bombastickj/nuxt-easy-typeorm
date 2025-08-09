@@ -12,7 +12,7 @@ export default defineNuxtModule<NuxtEasyTypeORMOptions>({
     name: NUXT_EASY_TYPEORM_MODULE_ID,
     configKey: 'typeorm',
     compatibility: {
-      bridge: false,
+      nuxt: '>=4.0.0'
     },
   },
   defaults: DEFAULT_OPTIONS,
