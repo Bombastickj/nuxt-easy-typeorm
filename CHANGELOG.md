@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v2.0.0
+
+[compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.2.0...v2.0.0)
+
+### 🩹 Fixes
+
+- Package.json definitions ([db4e19b](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/db4e19b))
+- **typescript:** Added ts configuration to nitro ([d6ebd74](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/d6ebd74))
+
+### 🏡 Chore
+
+- **nuxt:** ⚠️  Upgraded to Nuxt v4 ([3c58585](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/3c58585))
+- **playground:** Migrate to Nuxt v4 setup ([6acc672](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/6acc672))
+- **lint:** Added missing commas ([10b35ad](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/10b35ad))
+
+#### ⚠️ Breaking Changes
+
+- **nuxt:** ⚠️  Upgraded to Nuxt v4 ([3c58585](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/3c58585))
+
+### ❤️ Contributors
+
+- Jonazzzz <bombastickj@gmail.com>
+
 ## v1.2.0
 
 [compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.1.3...v1.2.0)
