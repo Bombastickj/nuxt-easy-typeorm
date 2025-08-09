@@ -14,8 +14,18 @@ export function prepareRuntime(
     strictPropertyInitialization: false,
     experimentalDecorators: true,
     emitDecoratorMetadata: true,
+    importHelpers: true,
   })
   nuxt.hook('nitro:config', (nitroConfig) => {
+    nitroConfig.typescript = nitroConfig.typescript || {}
+    nitroConfig.typescript.tsConfig = nitroConfig.typescript.tsConfig || {}
+    nitroConfig.typescript.tsConfig.compilerOptions = defu(nitroConfig.typescript.tsConfig.compilerOptions, {
+      strictPropertyInitialization: false,
+      experimentalDecorators: true,
+      emitDecoratorMetadata: true,
+      importHelpers: true,
+    })
+
     nitroConfig.esbuild = nitroConfig.esbuild || {}
     nitroConfig.esbuild.options = nitroConfig.esbuild.options || {}
     nitroConfig.esbuild.options.tsconfigRaw = '{ "compilerOptions": { "experimentalDecorators": true } }'
