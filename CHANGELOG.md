@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v2.1.0
+
+[compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v2.0.0...v2.1.0)
+
+### 🚀 Enhancements
+
+- **warning:** Added a warning when nitro.minify is enabled ([0b25827](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/0b25827))
+
+### 🏡 Chore
+
+- **lint:** Add missing comma ([076ea4b](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/076ea4b))
+
+### ❤️ Contributors
+
+- Jonazzzz <bombastickj@gmail.com>
+
 ## v2.0.0
 
 [compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v1.2.0...v2.0.0)
