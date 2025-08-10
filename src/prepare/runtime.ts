@@ -68,7 +68,7 @@ export function prepareRuntime(
           'Failing to do this will cause runtime errors during development and after build.',
           '',
           'By keeping `minify` enabled in a TypeORM project, you acknowledge that you are proceeding **at your own risk**.',
-        ].join(' \n')
+        ].join(' \n'),
       )
     }
   })
