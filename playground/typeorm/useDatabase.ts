@@ -1,5 +1,5 @@
 export const useDatabase = defineDataSource({
-  type: 'sqlite',
+  type: 'better-sqlite3',
   database: './playground/typeorm/database.sqlite',
   entities: [User],
   migrations: [],

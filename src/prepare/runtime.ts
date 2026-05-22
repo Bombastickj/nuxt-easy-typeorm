@@ -1,6 +1,6 @@
 import defu from 'defu'
 import { addServerImports } from '@nuxt/kit'
-import type { Nuxt } from 'nuxt/schema'
+import type { Nuxt } from '@nuxt/schema'
 import type { NuxtEasyTypeORMContext } from '../context'
 
 export function prepareRuntime(

@@ -1,4 +1,5 @@
-import { DataSource, type DataSourceOptions } from 'typeorm'
+import type { DataSourceOptions } from 'typeorm'
+import { DataSource } from 'typeorm'
 
 /**
  * Define a new DataSource
