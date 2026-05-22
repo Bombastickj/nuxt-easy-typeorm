@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v3.0.0
+
+[compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v2.1.0...v3.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Upgrade to TypeORM v1 and switch to better-sqlite3 ([b29945f](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/b29945f))
+
+### 🤖 CI
+
+- Upgrade Node.js to 22 and update actions to v6 ([e649ba3](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/e649ba3))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Upgrade to TypeORM v1 and switch to better-sqlite3 ([b29945f](https://github.com/Bombastickj/nuxt-easy-typeorm/commit/b29945f))
+
+### ❤️ Contributors
+
+- Jonazzzz <bombastickj@gmail.com>
+
 ## v2.1.0
 
 [compare changes](https://github.com/Bombastickj/nuxt-easy-typeorm/compare/v2.0.0...v2.1.0)
